@@ -1,0 +1,95 @@
+/* Define colores base para toda la página */
+:root {
+  --main-bg: #af54e7;     /* Color del fondo general */
+  --card-bg: #232222;     /* Fondo del contenedor principal */
+  --accent: #aa4ae2;      /* Color principal (botón, foco, etc.) */
+  --text: #fffafa;           /* Color de texto */
+}
+
+/* Quita márgenes y centra el contenido */
+body {
+  margin: 0;
+  background: var(--main-bg);
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--text);
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  display: flex; /* Activa flexbox */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+}
+
+/* Contenedor principal de la calculadora */
+.card {
+  background: var(--card-bg);
+  border-radius: 16px; /* Bordes redondeados */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1); /* Sombra */
+  padding: 30px;
+  width: 850px; /* Ancho fijo */
+  max-width: 95%; /* Para pantallas pequeñas */
+  display: flex; /* Divide en dos columnas */
+  gap: 40px; /* Espacio entre columnas */
+}
+
+/* Columnas internas */
+.col {
+  flex: 1; /* Ambas columnas ocupan el mismo ancho */
+}
+
+/* Títulos */
+h1 {
+  font-size: 20px;
+  text-align: center;
+}
+
+/* Campos de entrada (input y select) */
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 2px solid rgba(0,0,0,0.1);
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+/* Efecto cuando el usuario hace clic dentro del campo */
+input:focus, select:focus {
+  border-color: var(--accent);
+  outline: none; /* Quita borde azul por defecto */
+}
+
+/* Botón de convertir */
+button {
+  width: 100%;
+  padding: 12px;
+  background: var(--accent);
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer; /* Cambia el cursor al pasar encima */
+}
+
+/* Efecto al presionar el botón */
+button:active {
+  transform: translateY(1px);
+}
+
+/* Estilo del resultado */
+.result {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Texto en gris claro */
+.muted {
+  color: #ffffff;
+  font-size: 14px;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 700px) {
+  .card {
+    flex-direction: column; /* Apila las columnas */
+  }
+}
