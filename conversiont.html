@@ -1,53 +1,30 @@
-<!DOCTYPE html> <!-- Indica que el documento es HTML5 -->
-<html lang="es"> <!-- Establece que el contenido está en español -->
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <meta charset="UTF-8"> <!-- Permite caracteres especiales (acentos, ñ, etc.) -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que sea adaptable a celulares -->
-  <title>Calculadora de Temperatura</title> <!-- Título que aparece en la pestaña del navegador -->
-
-  <!-- Vincula el archivo CSS externo con los estilos visuales -->
-  <link rel="stylesheet" href="stilos.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversores</title>
+    <link rel="stylesheet" href="stilos.css">
 </head>
-
 <body>
-  <!-- Contenedor principal -->
-  <div class="card">
-    <!-- Sección izquierda: conversor de temperatura -->
-    <div class="col">
-      <h1>Calculadora de conversión de temperatura</h1> <!-- Título -->
+    <h1>Conversores</h1>
 
-      <!-- Campo para ingresar la temperatura -->
-      <label for="tempInput">Temperatura</label> <!-- Etiqueta del input -->
-      <input id="tempInput" type="number" placeholder="Ej: 30"> <!-- Entrada numérica -->
-
-      <!-- Menú para elegir el tipo de conversión -->
-      <select id="direction">
-        <option value="CtoF">Grados Centígrados → Fahrenheit</option>
-        <option value="FtoC">Grados Fahrenheit → Centígrados</option>
-      </select>
-
-      <!-- Botón que realiza la conversión -->
-      <button id="convertBtn">Convertir</button>
-
-      <!-- Resultado que se mostrará después de convertir -->
-      <div id="resultArea" class="result"></div>
-
-      <!-- Texto informativo con las fórmulas -->
-      <p class="muted">Fórmulas: °C → °F = (C × 9/5) + 32 | °F → °C = (F − 32) × 5/9</p>
+    <!-- Conversor de Celsius a Fahrenheit -->
+    <div class="converter">
+        <h2>Conversor de Celsius a Fahrenheit</h2>
+        <input type="number" id="celsius" placeholder="Ingresa °C">
+        <button onclick="convertirCelsius()">Convertir</button>
+        <p id="resultadoCelsius"></p>
     </div>
 
-    <!-- Sección derecha: explicación adicional -->
-    <div class="col">
-      <h1>Detalles y ejemplos</h1>
-      <p class="muted">Ingresa un número, elige el tipo de conversión y haz clic en "Convertir".</p>
-      <ul class="muted">
-        <li>30 °C = 86 °F</li>
-        <li>95 °F ≈ 35 °C</li>
-      </ul>
+    <!-- Conversor de Centímetros a Metros -->
+    <div class="converter">
+        <h2>Conversor de Centímetros a Metros</h2>
+        <input type="number" id="centimetros" placeholder="Ingresa cm">
+        <button onclick="convertirCentimetros()">Convertir</button>
+        <p id="resultadoCentimetros"></p>
     </div>
-  </div>
 
-  <!-- Vincula el archivo JavaScript externo -->
-  <script src="appconvercion.js"></script>
+    <script src="appconvercion.js"></script>
 </body>
 </html>
